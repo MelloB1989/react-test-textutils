@@ -1,0 +1,9 @@
+.center {
+    border: 5px solid #FFFF00;
+    text-align: center;
+    }
+
+    .full-hw {
+        height: 100%;
+        width: 100%;
+    }
