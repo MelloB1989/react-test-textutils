@@ -18,7 +18,6 @@ import {
 function App() {
 
   const [mode, setMode] = useState('light');
-  const [btntxt, setBtnText] = useState('Dark Mode');
   const [alert, setAlert] = useState(null);
 
   const showAlert = (message, type)=>{
@@ -36,19 +35,17 @@ function App() {
     if (mode === 'light'){
       setMode('dark');
       document.body.style.backgroundColor = '#212529';
-      setBtnText('Light Mode');
     }
     else {
       setMode('light');
       document.body.style.backgroundColor = 'white';
-      setBtnText('Dark Mode');
     }
   };
 
   return (
   <>
     <BrowserRouter>
-    <Navbar toggleMode={toggleMode} mode={mode} btntxt={btntxt}/>
+    <Navbar toggleMode={toggleMode} mode={mode}/>
     <Alert alert={alert}/>
     <div className="container my-2">
     {/*<TextArea title="Enter Text" mode={mode} showAlert={showAlert}/>*/}
