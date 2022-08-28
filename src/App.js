@@ -7,6 +7,12 @@ import { useState } from 'react';
 import React from 'react';
 import Alert from './components/Alert';
 import About from './components/About';
+/*
+import {
+  Routes,
+  Route
+} from "react-router-dom";
+*/
 
 function App() {
 
@@ -44,18 +50,16 @@ function App() {
     <Alert alert={alert}/>
     <div className="container my-2">
     <TextArea title="Enter Text" mode={mode} showAlert={showAlert}/>
-    </div>
-    </>
-  );
-  /*
-
+    {/*
     <Routes>
         <Route path="/about" element={<About />}></Route>
           <Route path="/" element={<TextArea title="Enter Text" mode={mode} showAlert={showAlert}/>}>
           </Route>
     </Routes>
-    
-  */
+    */}
+    </div>
+    </>
+  );
 }
 
 export default App;

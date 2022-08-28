@@ -29,8 +29,8 @@ export default function TextArea(props) {
   <div className="container">
     <h1>{props.title}</h1>
     <div className="mb-3">
-    <label for="textBox"></label>
-    <textarea class="form-control" value={text} onChange={handleOnChange} id="textBox" rows="6"></textarea>
+    <label htmlFor="textBox"></label>
+    <textarea className="form-control" value={text} onChange={handleOnChange} id="textBox" rows="6"></textarea>
     </div>
     <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to UpperCase</button>
     <button className="btn btn-primary mx-1 my-1" onClick={handleLoClick}>Convert to LowerCase</button>
