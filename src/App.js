@@ -7,12 +7,13 @@ import { useState } from 'react';
 import React from 'react';
 import Alert from './components/Alert';
 import About from './components/About';
-/*
+
 import {
+  BrowserRouter,
   Routes,
   Route
 } from "react-router-dom";
-*/
+
 
 function App() {
 
@@ -45,19 +46,19 @@ function App() {
   };
 
   return (
-    <>
+  <>
+    <BrowserRouter>
     <Navbar toggleMode={toggleMode} mode={mode} btntxt={btntxt}/>
     <Alert alert={alert}/>
     <div className="container my-2">
-    <TextArea title="Enter Text" mode={mode} showAlert={showAlert}/>
-    {/*
+    {/*<TextArea title="Enter Text" mode={mode} showAlert={showAlert}/>*/}
     <Routes>
         <Route path="/about" element={<About />}></Route>
           <Route path="/" element={<TextArea title="Enter Text" mode={mode} showAlert={showAlert}/>}>
           </Route>
-    </Routes>
-    */}
+    </Routes>    
     </div>
+    </BrowserRouter>
     </>
   );
 }

@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { Outlet, Link } from "react-router-dom";
 //import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
 
   return (
+  <>
     <nav className={`navbar navbar-expand-lg bg-${props.mode} navbar-${props.mode} ${props.mode === 'light' ? 'shadow' : 'shadow-lg'}`}>
   <div className="container-fluid">
     <a className="navbar-brand" href="/">TextUtils</a>
@@ -13,10 +15,10 @@ export default function Navbar(props) {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="/">Home</a>
+        <Link  className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="/about">About</a>
+        <Link className="nav-link active" aria-current="page" to="/about">About</Link>
         </li>
       </ul>
       <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
@@ -26,8 +28,10 @@ export default function Navbar(props) {
     </div>
   </div>
 </nav>
+<Outlet/>
+</>
   )
-}
+};
 /*
 Navbar.propTypes = {
   title: PropTypes.string.isRequired  // title is a required prop
